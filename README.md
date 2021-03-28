@@ -15,6 +15,7 @@ Extracts level data from a SMB .nes rom and outputs .asm for use with various SM
     Does not work with:
         Super Mario Brothers 2 (Japan).fds
         VS. Super Mario Bros.
+        Any non-NES/Famicom versions
     May or May not work with:
         Various hacks.
 
