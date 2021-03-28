@@ -72,26 +72,26 @@ def LevelExtract(filename, outputFilename, outputFilename2=False):
     ret = ProcessLevelData(fileData, 1)
     if not ret:
         Error()
-        sys.exit()
+        return
     elif ret.get('error'):
         ret.update(castleEndsWorld=True)
         ret = ProcessLevelData(fileData, 1, ret)
         if not ret:
             Error()
-            sys.exit()
+            return
         elif ret.get('error'):
             print('1b')
             Error(ret.get('errorText'))
-            sys.exit()
+            return
         
     ret = ProcessLevelData(fileData, 2, ret)
     if not ret:
         Error()
-        sys.exit()
+        return
     elif ret.get('error'):
         print('2')
         Error(ret.get('errorText'))
-        sys.exit()
+        return
     
     outputFile = open(outputFilename, 'w')
     outputFile2 = False
